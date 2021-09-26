@@ -72,7 +72,10 @@ func GetOrderById(c *gin.Context) { // Get model if exist
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"data": order})
+	c.JSON(
+		http.StatusOK,
+		gin.H{"data": order},
+	)
 }
 
 // PATCH /order/:id
